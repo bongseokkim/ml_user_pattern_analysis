@@ -1,16 +1,16 @@
+# 2020 D CUP Google Analytics
 
-## 2020 D CUP Google Analytics 
-+ 과거의 데이콘 데이터를 활용한 미래의 사용자 행동 패턴을 예측 
-+ 2020.12월.18일~2021.01.22
-+ private 2위 수상
+## Introduction
+- Predict future user behavior patterns using past DACON data.
+- Awarded 2nd place in the private leaderboard.
 
-## Description 
-+ 시간흐름에 따른 특징을 반영하기 위해서 날짜와 관련된 변수들을 추가하여 LSTM을 사용함.
-+ 이후 EDA를 통해 공휴일에는 전체적으로 값이 낮아지는 것을 확인하고 LSTM모델링 시, 공휴일에 가중치를 부여함.
-+ 같은 달 내에 존재하는 평일 및 휴일이 선명하게 나뉘는 것을 확인함. 또한 같은 달의 평일끼리는 비슷한 값을 가지며 휴일 또한 마찬가지임을 확인함.
-이와같은 안정적인 패턴을 반영하기 위해 휴일, 평일로 나누고 보다 정확한 예측을 위해 대회 개수에 따라 한번 더 분리함.
-+정형화된 패턴이 없는 날의 특징을 찾기 위해 추가 데이터 분석. 이를 통해 추가 데이터로부터 로그인 수, 제출 수를 파악하고 해당 데이터로부터 실제 로그인한 수, 총 로그인 한 수 등의 정보를 따로 파악하여 새로운 피처셋 구성
-+ 위와 같은 다양한 분석 및 모델링 과정을 통해 결과 값이 극단적인 패턴을 보여야 한다고 판단. 그래서 조금 더 유연한 결과를 갖는 xgb와 lstm의 결과와 극단적인 패턴을 보이는 extra의 결과를 Weighted average Ensemble을 통해 최종 결과를 도출함.
+## Description
+- To reflect characteristics over time, date-related variables were added and LSTM was utilized.
+- Through EDA, it was observed that values generally decrease on holidays, which led to assigning weights to holidays during LSTM modeling.
+- A clear distinction was noted between weekdays and holidays within the same month. It was also found that weekdays in the same month show similar patterns, as do the holidays. To reflect these stable patterns, days were divided into holidays and weekdays, and further segmented according to the number of contests for more accurate predictions.
+- Additional data analysis was conducted to identify features of days without regular patterns. This analysis helped in determining the number of logins and submissions from additional data, and separate features such as the actual number of logins and the total number of logins were developed.
+- Various analyses and modeling processes suggested that the results should show extreme patterns. To achieve a more flexible outcome, the results of xgb and lstm, which have more moderate results, and the extreme patterns of extra were combined through Weighted Average Ensemble to derive the final results.
 
-## 우승자 코드공유 
-https://dacon.io/competitions/official/235683/codeshare/2340?page=1&dtype=recent&ptype=%20
+## Winner's Code Share
+Visit the following link for the winner's code share:
+[https://dacon.io/competitions/official/235683/codeshare/2340?page=1&dtype=recent&ptype=%20](https://dacon.io/competitions/official/235683/codeshare/2340?page=1&dtype=recent&ptype=%20)
