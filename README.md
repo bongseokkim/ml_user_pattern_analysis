@@ -1,4 +1,4 @@
-# 2020 D CUP Google Analytics
+# Competition : D CUP Google Analytics
 
 ## Introduction
 - Predict future user behavior patterns using past DACON data.
